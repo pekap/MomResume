@@ -16,10 +16,11 @@
   header p{margin-top:6px;font-size:13px;color:#9aa2ad}
   .grid{max-width:1180px;margin:0 auto;display:grid;
     grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:26px}
-  .card{display:block;text-decoration:none;color:inherit;background:#20242b;
+  .card{display:flex;flex-direction:column;text-decoration:none;color:inherit;background:#20242b;
     border:1px solid #2c313a;border-radius:14px;overflow:hidden;
     transition:transform .18s ease, border-color .18s ease}
   .card:hover{transform:translateY(-4px);border-color:#4a5262}
+  .card-main{display:block;text-decoration:none;color:inherit;flex:1;min-width:0}
   .thumb{position:relative;width:100%;aspect-ratio:794/1123;overflow:hidden;background:#101216;
     container-type:inline-size}
   .thumb iframe{position:absolute;top:0;left:0;width:794px;height:1123px;border:0;
@@ -29,6 +30,12 @@
   .cname{font-size:14.5px;font-weight:800;display:flex;align-items:baseline;gap:9px}
   .cname .n{color:#7c8797;font-size:11px;font-weight:600;letter-spacing:.1em}
   .meta p{margin-top:5px;font-size:11.5px;line-height:1.5;color:#9aa2ad}
+  .card-actions{padding:0 16px 14px}
+  .pdf-dl{display:inline-flex;align-items:center;justify-content:center;gap:7px;width:100%;
+    border:1px solid #3a414d;background:#262b34;color:#e8eaee;border-radius:9px;
+    padding:8px 12px;cursor:pointer;font:600 12px/1 'Manrope',sans-serif}
+  .pdf-dl:hover{border-color:#5a6474;background:#2c323c}
+  .pdf-dl svg{width:14px;height:14px;flex:0 0 auto}
 </style>
 </head>
 <body>
@@ -37,48 +44,78 @@
   <p>Six visual directions, same content. Click any card to open the full page. Each page is print-ready (A4).</p>
 </header>
 <div class="grid">
-    <a class="card" href="concept-1-minimal.html">
+    <article class="card">
+      <a class="card-main" href="concept-1-minimal.html">
       <div class="thumb"><iframe src="concept-1-minimal.html?preview=1" title="Минимализм" loading="lazy" tabindex="-1"></iframe></div>
       <div class="meta">
         <div class="cname"><span class="n">01</span>Минимализм</div>
         <p>Black & white, one typeface (Inter), tabular dates, grayscale photo. No decoration at all.</p>
       </div>
-    </a>
-    <a class="card" href="concept-2-editorial.html">
+      </a>
+      <div class="card-actions">
+        <button type="button" class="pdf-dl"><svg viewBox="0 0 16 16" aria-hidden="true"><path fill="currentColor" d="M8.5 1.5a.5.5 0 0 0-1 0V9.3L5.35 7.15a.5.5 0 1 0-.7.7l3 3a.5.5 0 0 0 .7 0l3-3a.5.5 0 1 0-.7-.7L8.5 9.3V1.5zM3 12.5A1.5 1.5 0 0 0 4.5 14h7a1.5 1.5 0 0 0 1.5-1.5V11a.5.5 0 0 0-1 0v1.5a.5.5 0 0 1-.5.5h-7a.5.5 0 0 1-.5-.5V11a.5.5 0 0 0-1 0v1.5z"/></svg><span class="pdf-label">Download PDF</span></button>
+      </div>
+    </article>
+    <article class="card">
+      <a class="card-main" href="concept-2-editorial.html">
       <div class="thumb"><iframe src="concept-2-editorial.html?preview=1" title="Журнальный" loading="lazy" tabindex="-1"></iframe></div>
       <div class="meta">
         <div class="cname"><span class="n">02</span>Журнальный</div>
         <p>Warm paper, Cormorant Garamond serif, terracotta accents, framed photo. Sidebar on the right.</p>
       </div>
-    </a>
-    <a class="card" href="concept-3-swiss.html">
+      </a>
+      <div class="card-actions">
+        <button type="button" class="pdf-dl"><svg viewBox="0 0 16 16" aria-hidden="true"><path fill="currentColor" d="M8.5 1.5a.5.5 0 0 0-1 0V9.3L5.35 7.15a.5.5 0 1 0-.7.7l3 3a.5.5 0 0 0 .7 0l3-3a.5.5 0 1 0-.7-.7L8.5 9.3V1.5zM3 12.5A1.5 1.5 0 0 0 4.5 14h7a1.5 1.5 0 0 0 1.5-1.5V11a.5.5 0 0 0-1 0v1.5a.5.5 0 0 1-.5.5h-7a.5.5 0 0 1-.5-.5V11a.5.5 0 0 0-1 0v1.5z"/></svg><span class="pdf-label">Download PDF</span></button>
+      </div>
+    </article>
+    <article class="card">
+      <a class="card-main" href="concept-3-swiss.html">
       <div class="thumb"><iframe src="concept-3-swiss.html?preview=1" title="Гельветика" loading="lazy" tabindex="-1"></iframe></div>
       <div class="meta">
         <div class="cname"><span class="n">03</span>Гельветика</div>
         <p>Swiss poster style: ultramarine block, Archivo 900 caps, numbered sections, square framed photo.</p>
       </div>
-    </a>
-    <a class="card" href="concept-4-timeline.html">
+      </a>
+      <div class="card-actions">
+        <button type="button" class="pdf-dl"><svg viewBox="0 0 16 16" aria-hidden="true"><path fill="currentColor" d="M8.5 1.5a.5.5 0 0 0-1 0V9.3L5.35 7.15a.5.5 0 1 0-.7.7l3 3a.5.5 0 0 0 .7 0l3-3a.5.5 0 1 0-.7-.7L8.5 9.3V1.5zM3 12.5A1.5 1.5 0 0 0 4.5 14h7a1.5 1.5 0 0 0 1.5-1.5V11a.5.5 0 0 0-1 0v1.5a.5.5 0 0 1-.5.5h-7a.5.5 0 0 1-.5-.5V11a.5.5 0 0 0-1 0v1.5z"/></svg><span class="pdf-label">Download PDF</span></button>
+      </div>
+    </article>
+    <article class="card">
+      <a class="card-main" href="concept-4-timeline.html">
       <div class="thumb"><iframe src="concept-4-timeline.html?preview=1" title="Таймлайн" loading="lazy" tabindex="-1"></iframe></div>
       <div class="meta">
         <div class="cname"><span class="n">04</span>Таймлайн</div>
         <p>Centered header with round photo, career as one continuous timeline, exams in a soft side panel.</p>
       </div>
-    </a>
-    <a class="card" href="concept-5-clinical.html">
+      </a>
+      <div class="card-actions">
+        <button type="button" class="pdf-dl"><svg viewBox="0 0 16 16" aria-hidden="true"><path fill="currentColor" d="M8.5 1.5a.5.5 0 0 0-1 0V9.3L5.35 7.15a.5.5 0 1 0-.7.7l3 3a.5.5 0 0 0 .7 0l3-3a.5.5 0 1 0-.7-.7L8.5 9.3V1.5zM3 12.5A1.5 1.5 0 0 0 4.5 14h7a1.5 1.5 0 0 0 1.5-1.5V11a.5.5 0 0 0-1 0v1.5a.5.5 0 0 1-.5.5h-7a.5.5 0 0 1-.5-.5V11a.5.5 0 0 0-1 0v1.5z"/></svg><span class="pdf-label">Download PDF</span></button>
+      </div>
+    </article>
+    <article class="card">
+      <a class="card-main" href="concept-5-clinical.html">
       <div class="thumb"><iframe src="concept-5-clinical.html?preview=1" title="Клиника" loading="lazy" tabindex="-1"></iframe></div>
       <div class="meta">
         <div class="cname"><span class="n">05</span>Клиника</div>
         <p>Modern healthcare cards on a mint background, IBM Plex, exams as a pill/tag cloud across the bottom.</p>
       </div>
-    </a>
-    <a class="card" href="concept-6-dark.html">
+      </a>
+      <div class="card-actions">
+        <button type="button" class="pdf-dl"><svg viewBox="0 0 16 16" aria-hidden="true"><path fill="currentColor" d="M8.5 1.5a.5.5 0 0 0-1 0V9.3L5.35 7.15a.5.5 0 1 0-.7.7l3 3a.5.5 0 0 0 .7 0l3-3a.5.5 0 1 0-.7-.7L8.5 9.3V1.5zM3 12.5A1.5 1.5 0 0 0 4.5 14h7a1.5 1.5 0 0 0 1.5-1.5V11a.5.5 0 0 0-1 0v1.5a.5.5 0 0 1-.5.5h-7a.5.5 0 0 1-.5-.5V11a.5.5 0 0 0-1 0v1.5z"/></svg><span class="pdf-label">Download PDF</span></button>
+      </div>
+    </article>
+    <article class="card">
+      <a class="card-main" href="concept-6-dark.html">
       <div class="thumb"><iframe src="concept-6-dark.html?preview=1" title="Вечерний" loading="lazy" tabindex="-1"></iframe></div>
       <div class="meta">
         <div class="cname"><span class="n">06</span>Вечерний</div>
         <p>Full-height charcoal panel with gold accents, Cormorant + Jost, large ringed photo. Closest in spirit to the original, pushed further.</p>
       </div>
-    </a>
+      </a>
+      <div class="card-actions">
+        <button type="button" class="pdf-dl"><svg viewBox="0 0 16 16" aria-hidden="true"><path fill="currentColor" d="M8.5 1.5a.5.5 0 0 0-1 0V9.3L5.35 7.15a.5.5 0 1 0-.7.7l3 3a.5.5 0 0 0 .7 0l3-3a.5.5 0 1 0-.7-.7L8.5 9.3V1.5zM3 12.5A1.5 1.5 0 0 0 4.5 14h7a1.5 1.5 0 0 0 1.5-1.5V11a.5.5 0 0 0-1 0v1.5a.5.5 0 0 1-.5.5h-7a.5.5 0 0 1-.5-.5V11a.5.5 0 0 0-1 0v1.5z"/></svg><span class="pdf-label">Download PDF</span></button>
+      </div>
+    </article>
 </div>
   <script src="i18n.js"></script>
 </body>

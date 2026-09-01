@@ -24,6 +24,7 @@
     { ru: "Центрированный заголовок с круглым фото, карьера одной непрерывной линией, обследования в мягкой боковой панели.", en: "Centered header with round photo, career as one continuous timeline, exams in a soft side panel.", sr: "Centrirano zaglavlje sa okruglom fotografijom, karijera kao jedna vremenska linija, pregledi u mekoj bočnoj tabli." },
     { ru: "Современные медицинские карточки на мятном фоне, IBM Plex, обследования облаком тегов внизу.", en: "Modern healthcare cards on a mint background, IBM Plex, exams as a pill/tag cloud across the bottom.", sr: "Moderne medicinske kartice na mint pozadini, IBM Plex, pregledi kao oblak oznaka na dnu." },
     { ru: "Угольная панель на всю высоту с золотыми акцентами, Cormorant + Jost, крупное фото в кольце. Ближе всего к оригиналу, но сильнее.", en: "Full-height charcoal panel with gold accents, Cormorant + Jost, large ringed photo. Closest in spirit to the original, pushed further.", sr: "Ugljena tabla preko cele visine sa zlatnim akcentima, Cormorant + Jost, velika fotografija u prstenu. Najbliže originalu, ali izvedeno dalje." },
+    { ru: "Скачать PDF", en: "Download PDF", sr: "Preuzmi PDF" },
 
     // —— identity ——
     { ru: "Лариса Слободянюк", en: "Larisa Slobodyanyuk", sr: "Larisa Slobodjanjuk" },
@@ -179,6 +180,9 @@
   }
 
   var PAGE_W = 794;
+  var PDF_LABEL = { ru: "Скачать PDF", en: "Download PDF", sr: "Preuzmi PDF" };
+  var PDF_ICON =
+    '<svg viewBox="0 0 16 16" aria-hidden="true"><path fill="currentColor" d="M8.5 1.5a.5.5 0 0 0-1 0V9.3L5.35 7.15a.5.5 0 1 0-.7.7l3 3a.5.5 0 0 0 .7 0l3-3a.5.5 0 1 0-.7-.7L8.5 9.3V1.5zM3 12.5A1.5 1.5 0 0 0 4.5 14h7a1.5 1.5 0 0 0 1.5-1.5V11a.5.5 0 0 0-1 0v1.5a.5.5 0 0 1-.5.5h-7a.5.5 0 0 1-.5-.5V11a.5.5 0 0 0-1 0v1.5z"/></svg>';
 
   function isPreview() {
     try {
@@ -218,11 +222,54 @@
     walk(document.body, lang);
     var bar = document.querySelector(".i18n-bar");
     if (bar) {
-      [].forEach.call(bar.querySelectorAll("button"), function (btn) {
+      [].forEach.call(bar.querySelectorAll("button[data-lang]"), function (btn) {
         btn.setAttribute("aria-pressed", btn.getAttribute("data-lang") === lang ? "true" : "false");
       });
     }
     notifyPreviews(lang);
+    syncPdfLabels(lang);
+  }
+
+  function syncPdfLabels(lang) {
+    var label = PDF_LABEL[lang] || PDF_LABEL.ru;
+    [].forEach.call(document.querySelectorAll(".pdf-dl, .i18n-pdf"), function (btn) {
+      var span = btn.querySelector(".pdf-label");
+      if (span) span.textContent = label;
+      btn.setAttribute("aria-label", label);
+      btn.setAttribute("title", label);
+    });
+  }
+
+  function printResume(win) {
+    var target = win || window;
+    try {
+      target.focus();
+    } catch (e) {}
+    try {
+      target.print();
+    } catch (e) {
+      if (target !== window) window.print();
+    }
+  }
+
+  function downloadFromFrame(frame) {
+    if (!frame) return;
+    function go() {
+      try {
+        if (frame.contentWindow) printResume(frame.contentWindow);
+      } catch (e) {
+        var src = frame.getAttribute("src") || "";
+        window.open(src.replace(/\?preview=1/, ""), "_blank");
+      }
+    }
+    var doc = null;
+    try { doc = frame.contentDocument; } catch (e) {}
+    if (doc && doc.readyState === "complete" && doc.querySelector(".page")) {
+      go();
+      return;
+    }
+    frame.addEventListener("load", go, { once: true });
+    try { frame.loading = "eager"; } catch (e) {}
   }
 
   function current() {
@@ -241,14 +288,17 @@
     var style = document.createElement("style");
     style.textContent =
       "html{scroll-padding-top:52px}" +
-      ".i18n-bar{position:fixed;top:0;left:0;right:0;z-index:400;display:flex;justify-content:flex-end;gap:6px;" +
+      ".i18n-bar{position:fixed;top:0;left:0;right:0;z-index:400;display:flex;align-items:center;gap:8px;" +
       "padding:8px 14px;background:rgba(23,26,31,.92);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);" +
       "border-bottom:1px solid rgba(255,255,255,.08);font-family:Manrope,Inter,'Segoe UI',system-ui,sans-serif}" +
+      ".i18n-langs{display:flex;gap:6px;margin-left:auto}" +
       ".i18n-bar button{display:inline-flex;align-items:center;gap:8px;border:1px solid transparent;background:transparent;" +
       "color:#e8eaee;border-radius:999px;padding:5px 11px 5px 7px;cursor:pointer;font:600 12px/1 inherit;letter-spacing:.02em}" +
       ".i18n-bar button:hover{background:rgba(255,255,255,.08)}" +
       ".i18n-bar button[aria-pressed='true']{background:#fff;color:#171a1f;border-color:#fff}" +
       ".i18n-bar svg{width:18px;height:12px;border-radius:2px;box-shadow:0 0 0 1px rgba(0,0,0,.25);flex:0 0 auto;display:block}" +
+      ".i18n-pdf{border-color:rgba(255,255,255,.18)!important;gap:6px!important}" +
+      ".i18n-pdf svg{width:14px;height:14px;border-radius:0;box-shadow:none}" +
       "body{padding-top:52px !important}" +
       "@media print{.i18n-bar{display:none !important}html{scroll-padding-top:0}body{padding-top:0 !important}}";
     document.head.appendChild(style);
@@ -257,6 +307,18 @@
     bar.className = "i18n-bar";
     bar.setAttribute("role", "navigation");
     bar.setAttribute("aria-label", "Language");
+
+    if (document.querySelector(".page")) {
+      var pdf = document.createElement("button");
+      pdf.type = "button";
+      pdf.className = "i18n-pdf";
+      pdf.innerHTML = PDF_ICON + '<span class="pdf-label">Download PDF</span>';
+      pdf.addEventListener("click", function () { printResume(window); });
+      bar.appendChild(pdf);
+    }
+
+    var langs = document.createElement("div");
+    langs.className = "i18n-langs";
     LANGS.forEach(function (l) {
       var btn = document.createElement("button");
       btn.type = "button";
@@ -264,8 +326,9 @@
       btn.setAttribute("title", l.title);
       btn.innerHTML = FLAGS[l.id] + "<span>" + l.label + "</span>";
       btn.addEventListener("click", function () { apply(l.id); });
-      bar.appendChild(btn);
+      langs.appendChild(btn);
     });
+    bar.appendChild(langs);
     document.body.insertBefore(bar, document.body.firstChild);
   }
 
@@ -276,7 +339,9 @@
       "html.preview,html.preview body{padding:0!important;margin:0!important;min-height:0!important;" +
       "width:" + PAGE_W + "px!important;height:1123px!important;overflow:hidden!important;display:block!important}" +
       "html.preview .i18n-bar{display:none!important}" +
-      "html.preview .page{margin:0!important;box-shadow:none!important}";
+      "html.preview .page{margin:0!important;box-shadow:none!important}" +
+      "@media print{html.preview,html.preview body{width:auto!important;height:auto!important;overflow:visible!important;" +
+      "background:#fff!important}html.preview .page{width:210mm!important;height:297mm!important}}";
     document.head.appendChild(style);
   }
 
@@ -290,12 +355,21 @@
     });
     window.addEventListener("message", function (e) {
       if (e.data && e.data.type === "resume-lang" && e.data.lang) apply(e.data.lang);
+      if (e.data && e.data.type === "resume-pdf") printResume(window);
     });
     if (!preview) {
       scaleThumbs();
       window.addEventListener("resize", scaleThumbs);
       [].forEach.call(document.querySelectorAll(".thumb iframe"), function (frame) {
         frame.addEventListener("load", scaleThumbs);
+      });
+      document.addEventListener("click", function (e) {
+        var btn = e.target.closest && e.target.closest(".pdf-dl");
+        if (!btn) return;
+        e.preventDefault();
+        e.stopPropagation();
+        var card = btn.closest(".card");
+        downloadFromFrame(card && card.querySelector("iframe"));
       });
     }
   }
