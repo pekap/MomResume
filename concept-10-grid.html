@@ -56,6 +56,8 @@
   .edu .entry p{font-size:10.7px;line-height:1.34}
 
   @media print{
+    /* keep background colours, rules and bullets in the PDF; browsers drop them by default */
+    *{-webkit-print-color-adjust:exact;print-color-adjust:exact}
     body{padding:0;background:#fff}
     .page{box-shadow:none;width:210mm;height:297mm;aspect-ratio:auto}
     @page{size:A4;margin:0}

@@ -58,6 +58,8 @@
     background:var(--teal-soft);color:#1f4a45;padding:4px 10px;border-radius:99px}
 
   @media print{
+    /* keep background colours, rules and bullets in the PDF; browsers drop them by default */
+    *{-webkit-print-color-adjust:exact;print-color-adjust:exact}
     body{padding:0;background:#fff}
     .page{box-shadow:none;width:210mm;height:297mm;aspect-ratio:auto}
     @page{size:A4;margin:0}
