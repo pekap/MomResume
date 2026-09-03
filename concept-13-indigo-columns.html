@@ -51,10 +51,9 @@
   .col-main .entry .fine{font-size:9.8px;color:var(--mid)}
   .edu .entry{padding-bottom:6px}
   .edu .entry p{font-size:10.7px;line-height:1.34}
-  /* dotted leader between columns */
-  .col-main section{position:relative}
-  .col-main .entries{position:relative}
-  .col-main .entries::before{content:"";position:absolute;left:111px;top:2px;bottom:6px;border-left:1px dashed var(--hair)}
+  /* undated lines span both columns and start at the date edge */
+  .col-main .entry.full{grid-template-columns:1fr}
+  .col-main .entry.full p{grid-column:1}
 
   @media print{
     /* keep background colours, rules and bullets in the PDF; browsers drop them by default */
@@ -126,12 +125,12 @@
       <section class="edu">
         <h2>Образование</h2>
 <div class="entries">
-        <div class="entry"><span class="years"></span><p>Являюсь автором <b>более 20 статей и 1 патента</b> на изобретение</p></div>
+        <div class="entry full"><p>Являюсь автором <b>более 20 статей и 1 патента</b> на изобретение</p></div>
 <div class="entry"><span class="years">2024 – 2025 гг.</span><p>Первый Московский государственный медицинский университет им. И.М.&nbsp;Сеченова, «Биохакинг» — диплом о профессиональной переподготовке с предоставлением права на ведение профессиональной деятельности в сфере «консультирование в области превентивного персонализированного управления здоровьем»</p></div>
 <div class="entry"><span class="years">09.03.2024</span><p>Сертификат о прохождении обучения «Нюансы в теле человека. Функциональная неврология»</p></div>
 <div class="entry"><span class="years">1999 – 2026 гг.</span><p>Регулярное прохождение сертификационных курсов и курсов повышения квалификации по специальности — врач УЗД</p></div>
 <div class="entry"><span class="years">2016 г.</span><p>Обучение в рамках реализации модели отработки основных принципов непрерывного медицинского образования и получение зачётных единиц, обеспеченных Российской ассоциацией УЗД в медицине (РАСУДМ), с индивидуальным кодом подтверждения</p></div>
-<div class="entry"><span class="years"></span><p>Регулярное участие во всероссийских конгрессах и мастер-классах по УЗД</p></div>
+<div class="entry full"><p>Регулярное участие во всероссийских конгрессах и мастер-классах по УЗД</p></div>
 <div class="entry"><span class="years">2007 – 2011 гг.</span><p>Ассистент кафедры УЗД УГМАДО (г. Челябинск), ведущий специалист по преподаванию сертификационного курса УЗД позвоночника</p></div>
 <div class="entry"><span class="years">2005 г.</span><p>Решением диссертационного совета Российского центра рентгенорадиологии присуждена учёная степень кандидата медицинских наук</p></div>
 <div class="entry"><span class="years">2001 – 2003 гг.</span><p>Клиническая ординатура на кафедре лучевой диагностики и лучевой терапии с курсом УЗД УГМАДО</p></div>
