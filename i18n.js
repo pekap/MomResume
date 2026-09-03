@@ -14,10 +14,11 @@
     { ru: "Лариса Слободянюк — Сетка", en: "Larisa Slobodyanyuk — Grid", sr: "Larisa Slobodjanjuk — Mreža" },
     { ru: "Лариса Слободянюк — Портрет", en: "Larisa Slobodyanyuk — Portrait", sr: "Larisa Slobodjanjuk — Portret" },
     { ru: "Лариса Слободянюк — Лаборатория", en: "Larisa Slobodyanyuk — Laboratory", sr: "Larisa Slobodjanjuk — Laboratorija" },
+    { ru: "Лариса Слободянюк — Индиго · колонки", en: "Larisa Slobodyanyuk — Indigo · Columns", sr: "Larisa Slobodjanjuk — Indigo · Kolone" },
     { ru: "Лариса Слободянюк — резюме", en: "Larisa Slobodyanyuk — CV", sr: "Larisa Slobodjanjuk — CV" },
 
     // —— gallery copy ——
-    { ru: "Двенадцать визуальных направлений, один и тот же текст. Нажмите на карточку, чтобы открыть страницу. Каждая страница готова к печати (A4).", en: "Twelve visual directions, the same content. Click any card to open the full page. Each page is print-ready in A4 format.", sr: "Dvanaest vizuelnih koncepata, isti sadržaj. Kliknite na karticu da biste otvorili celu stranicu. Svaka stranica je spremna za štampu na formatu A4." },
+    { ru: "Тринадцать визуальных направлений, один и тот же текст. Нажмите на карточку, чтобы открыть страницу. Каждая страница готова к печати (A4).", en: "Thirteen visual directions, the same content. Click any card to open the full page. Each page is print-ready in A4 format.", sr: "Trinaest vizuelnih koncepata, isti sadržaj. Kliknite na karticu da biste otvorili celu stranicu. Svaka stranica je spremna za štampu na formatu A4." },
     { ru: "Минимализм", en: "Minimal", sr: "Minimalizam" },
     { ru: "Журнальный", en: "Editorial", sr: "Časopisni" },
     { ru: "Гельветика", en: "Helvetica", sr: "Helvetica" },
@@ -36,6 +37,8 @@
     { ru: "Сетка", en: "Grid", sr: "Mreža" },
     { ru: "Портрет", en: "Portrait", sr: "Portret" },
     { ru: "Лаборатория", en: "Laboratory", sr: "Laboratorija" },
+    { ru: "Индиго · колонки", en: "Indigo · Columns", sr: "Indigo · Kolone" },
+    { ru: "Индиго с датами в отдельной колонке слева и текстом, выровненным по правой колонке.", en: "Indigo with dates in their own left column and the text aligned in the right column.", sr: "Indigo sa datumima u zasebnoj levoj koloni i tekstom poravnatim u desnoj koloni." },
     { ru: "Светло-зелёная боковая панель с фото во всю ширину, Fraunces + DM Sans. Имя и опыт — в белой части.", en: "Pale sage sidebar with a full-width photo, Fraunces + DM Sans. Name and career on the white side.", sr: "Bledozelena bočna traka sa fotografijom preko cele širine, Fraunces + DM Sans. Ime i karijera na beloj strani." },
     { ru: "Тёмно-синяя шапка с фото на всю высоту у правого края, Playfair Display, золотые линии. Обследования в светлой колонке слева.", en: "Navy header with a full-height photo on the right edge, Playfair Display, gold rules. Exams in a pale left column.", sr: "Tamnoplavo zaglavlje sa fotografijom pune visine uz desnu ivicu, Playfair Display, zlatne linije. Pregledi u svetloj levoj koloni." },
     { ru: "Газетная вёрстка: шапка с двойными линиями, Libre Baskerville, текст колонками, фото с подписью.", en: "Newspaper layout: double-ruled masthead, Libre Baskerville, columns of text, captioned photo.", sr: "Novinski prelom: zaglavlje sa dvostrukim linijama, Libre Baskerville, tekst u kolonama, fotografija sa potpisom." },
