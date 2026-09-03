@@ -26,7 +26,10 @@
   .photo img{width:100%;height:100%;object-fit:cover;object-position:50% 15%;display:block}
   .photo::before{content:"";position:absolute;left:0;top:0;bottom:0;width:6px;background:var(--gold)}
 
-  .cols{flex:1;display:flex;min-height:0}
+  /* header stays on top and the columns tuck 1px under it, so fractional zoom or thumbnail scaling
+     never opens a hairline between the navy header and the pale sidebar */
+  header{position:relative;z-index:1}
+  .cols{flex:1;display:flex;min-height:0;margin-top:-1px;padding-top:1px}
   .col-side{flex:0 0 33%;background:var(--pale);padding:26px 24px 22px 44px;border-right:1px solid var(--hair)}
   .col-main{flex:1;padding:26px 40px 22px 30px;min-width:0}
 
