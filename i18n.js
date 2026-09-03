@@ -24,7 +24,7 @@
     { ru: "Таймлайн", en: "Timeline", sr: "Vremenska linija" },
     { ru: "Клиника", en: "Clinical", sr: "Klinički" },
     { ru: "Вечерний", en: "Evening", sr: "Večernji" },
-    { ru: "Чёрно-белая типографика, один шрифт (Inter), табличные даты, цветное фото. Без декора.", en: "Black and white typography, one typeface (Inter), tabular dates, and a colour photo. No decoration.", sr: "Crno-bela tipografija, jedan font (Inter), datumi tabularnim ciframa i fotografija u boji. Bez dekoracije." },
+    { ru: "Чёрно-белая типографика, один шрифт (Inter), табличные даты, цветное фото. Без декора.", en: "Black and white typography, one typeface (Inter), tabular dates, and a color photo. No decoration.", sr: "Crno-bela tipografija, jedan font (Inter), datumi tabularnim ciframa i fotografija u boji. Bez dekoracije." },
     { ru: "Тёплая бумага, антиква Cormorant Garamond, терракотовые акценты, фото в рамке. Боковая колонка справа.", en: "Warm paper, Cormorant Garamond serif, terracotta accents, framed photo. Sidebar on the right.", sr: "Topla hartija, serif Cormorant Garamond, terakota akcenti, fotografija u ramu. Bočna kolona desno." },
     { ru: "Швейцарский плакатный стиль: ультрамариновый блок, Archivo 900 капителью, нумерованные разделы, квадратная рамка фото.", en: "Swiss poster style: an ultramarine block, Archivo 900 capitals, numbered sections, and a photo in a square frame.", sr: "Švajcarski plakatni stil: ultramarin blok, verzalna slova u fontu Archivo 900, numerisani odeljci i fotografija u kvadratnom okviru." },
     { ru: "Центрированный заголовок с круглым фото, карьера одной непрерывной линией, обследования в мягкой боковой панели.", en: "Centered header with a round photo, the career shown as one continuous timeline, and examinations in a subtle side panel.", sr: "Centrirano zaglavlje sa okruglom fotografijom, karijera prikazana kao neprekidna vremenska linija i pregledi u diskretnom bočnom panelu." },
@@ -43,6 +43,10 @@
     { ru: "Крупное портретное фото на кремовой бумаге, Bodoni Moda, бордовые акценты, обследования и образование внизу.", en: "Large portrait photo on cream paper, Bodoni Moda, burgundy accents, exams and education across the bottom.", sr: "Velika portretna fotografija na krem papiru, Bodoni Moda, bordo akcenti, pregledi i obrazovanje u donjem delu." },
     { ru: "Лабораторный стиль: моноширинные подписи JetBrains Mono, нумерованные обследования, фото с уголками, бирюзовый акцент.", en: "Lab style: JetBrains Mono labels, numbered examinations, corner-bracketed photo, teal accent.", sr: "Laboratorijski stil: JetBrains Mono oznake, numerisani pregledi, fotografija sa uglovima, tirkizni akcenat." },
     { ru: "Скачать PDF", en: "Download PDF", sr: "Preuzmi PDF" },
+    { ru: "Основной вариант", en: "Main version", sr: "Glavna verzija" },
+    { ru: "Другие варианты", en: "Other versions", sr: "Ostale verzije" },
+    { ru: "Открыть страницу", en: "Open page", sr: "Otvori stranicu" },
+    { ru: "Вариант, который выбрала Лариса. Остальные направления ниже — для сравнения.", en: "The version Larisa chose. The other directions are below for comparison.", sr: "Verzija koju je Larisa izabrala. Ostali pravci su ispod, radi poređenja." },
 
     // —— identity ——
     { ru: "Лариса Слободянюк", en: "Larisa Slobodyanyuk", sr: "Larisa Slobodjanjuk" },
@@ -52,15 +56,15 @@
     { ru: "Слободянюк", en: "Slobodyanyuk", sr: "Slobodjanjuk" },
     { ru: "Фото", en: "Photo", sr: "Foto" },
 
-    { ru: "Кандидат медицинских наук · Врач ультразвуковой диагностики", en: "Candidate of Medical Sciences · Physician specializing in ultrasound diagnostics", sr: "Kandidat medicinskih nauka · Lekar ultrazvučne dijagnostike" },
-    { ru: "Кандидат медицинских наук — врач ультразвуковой диагностики", en: "Candidate of Medical Sciences — physician specializing in ultrasound diagnostics", sr: "Kandidat medicinskih nauka — lekar ultrazvučne dijagnostike" },
-    { ru: "Кандидат медицинских наук · Врач УЗД", en: "Candidate of Medical Sciences · Ultrasound physician", sr: "Kandidat medicinskih nauka · Lekar UZ dijagnostike" },
-    { ru: "Кандидат медицинских наук", en: "Candidate of Medical Sciences", sr: "Kandidat medicinskih nauka" },
-    { ru: "Врач ультразвуковой диагностики", en: "Physician specializing in ultrasound diagnostics", sr: "Lekar ultrazvučne dijagnostike" },
+    { ru: "Кандидат медицинских наук · Врач ультразвуковой диагностики", en: "PhD in Medical Sciences · Diagnostic Ultrasound Physician", sr: "Doktor medicinskih nauka · Lekar ultrazvučne dijagnostike" },
+    { ru: "Кандидат медицинских наук — врач ультразвуковой диагностики", en: "PhD in Medical Sciences — diagnostic ultrasound physician", sr: "Doktor medicinskih nauka — lekar ultrazvučne dijagnostike" },
+    { ru: "Кандидат медицинских наук · Врач УЗД", en: "PhD in Medical Sciences · Ultrasound Physician", sr: "Doktor medicinskih nauka · Lekar UZ dijagnostike" },
+    { ru: "Кандидат медицинских наук", en: "PhD in Medical Sciences", sr: "Doktor medicinskih nauka" },
+    { ru: "Врач ультразвуковой диагностики", en: "Diagnostic Ultrasound Physician", sr: "Lekar ultrazvučne dijagnostike" },
 
     // —— section headings ——
-    { ru: "Провожу обследования", en: "Examinations I perform", sr: "Pregledi koje radim" },
-    { ru: "Провожу", en: "I perform", sr: "Radim" },
+    { ru: "Провожу обследования", en: "Examinations I perform", sr: "Pregledi koje obavljam" },
+    { ru: "Провожу", en: "I perform", sr: "Obavljam" },
     { ru: "обследования", en: "examinations", sr: "preglede" },
     { ru: "Опыт работы", en: "Work experience", sr: "Radno iskustvo" },
     { ru: "Образование", en: "Education", sr: "Obrazovanje" },
@@ -72,28 +76,28 @@
     { ru: "Москва, Сокольнический Вал 1, кв. 444", en: "Moscow, Sokolnichesky Val 1, apt. 444", sr: "Moskva, Sokolničeski Val 1, stan 444" },
 
     // —— exams ——
-    { ru: "УЗИ органов брюшной полости", en: "Abdominal ultrasound", sr: "Ultrazvuk organa trbušne duplje" },
+    { ru: "УЗИ органов брюшной полости", en: "Abdominal ultrasound", sr: "Ultrazvuk abdomena" },
     { ru: "УЗИ почек и надпочечников", en: "Ultrasound of the kidneys and adrenal glands", sr: "Ultrazvuk bubrega i nadbubrežnih žlezda" },
     { ru: "УЗИ органов малого таза женщин (трансабдом. и ТВУЗИ с ЦДК)", en: "Pelvic ultrasound for women (transabdominal and transvaginal, with color Doppler)", sr: "Ultrazvuk organa male karlice kod žena (transabdominalno i transvaginalno, sa kolor doplerom)" },
     { ru: "УЗИ беременности 1 триместр", en: "First-trimester pregnancy ultrasound", sr: "Ultrazvuk trudnoće u prvom trimestru" },
-    { ru: "УЗИ — фолликулометрия", en: "Ultrasound — folliculometry", sr: "Ultrazvuk — folikulometrija" },
+    { ru: "УЗИ — фолликулометрия", en: "Follicle tracking ultrasound (folliculometry)", sr: "Folikulometrija (ultrazvučno praćenje folikula)" },
     { ru: "УЗИ молочной железы", en: "Breast ultrasound", sr: "Ultrazvuk dojke" },
     { ru: "УЗИ щитовидной железы", en: "Thyroid ultrasound", sr: "Ultrazvuk štitaste žlezde" },
     { ru: "УЗИ мочевого пузыря", en: "Bladder ultrasound", sr: "Ultrazvuk mokraćne bešike" },
     { ru: "УЗИ предстательной железы", en: "Prostate ultrasound", sr: "Ultrazvuk prostate" },
     { ru: "УЗИ мошонки", en: "Scrotal ultrasound", sr: "Ultrazvuk skrotuma" },
-    { ru: "УЗИ шейного и поясничного отдела позвоночника", en: "Ultrasound of the cervical and lumbar regions of the spine", sr: "Ultrazvuk vratnog i lumbalnog dela kičme" },
+    { ru: "УЗИ шейного и поясничного отдела позвоночника", en: "Cervical and lumbar spine ultrasound", sr: "Ultrazvuk vratnog i lumbalnog dela kičme" },
     { ru: "УЗИ тазобедренных суставов детей", en: "Pediatric hip ultrasound", sr: "Ultrazvuk kukova kod dece" },
     { ru: "УЗИ голеностопных суставов", en: "Ankle ultrasound", sr: "Ultrazvuk skočnih zglobova" },
     { ru: "УЗИ локтевых суставов", en: "Elbow ultrasound", sr: "Ultrazvuk lakatnih zglobova" },
     { ru: "УЗИ лучезапястных суставов", en: "Wrist ultrasound", sr: "Ultrazvuk ručnih zglobova" },
     { ru: "УЗИ мягких тканей", en: "Soft-tissue ultrasound", sr: "Ultrazvuk mekih tkiva" },
-    { ru: "УЗИ коленных суставов", en: "Knee ultrasound", sr: "Ultrazvuk kolenskih zglobova" },
+    { ru: "УЗИ коленных суставов", en: "Knee ultrasound", sr: "Ultrazvuk kolena" },
     { ru: "УЗИ экстракраниальных сосудов", en: "Extracranial vascular ultrasound", sr: "Ultrazvuk ekstrakranijalnih krvnih sudova" },
-    { ru: "УЗИ вен нижних конечностей", en: "Ultrasound of the lower-limb veins", sr: "Ultrazvuk vena donjih ekstremiteta" },
+    { ru: "УЗИ вен нижних конечностей", en: "Lower-limb venous ultrasound", sr: "Ultrazvuk vena donjih ekstremiteta" },
     { ru: "УЗИ навигация при биопсиях и пункциях", en: "Ultrasound guidance for biopsies and other needle procedures", sr: "Ultrazvučno vođenje biopsija i punkcija" },
-    { ru: "УЗИ контроль инвазивных процедур", en: "Ultrasound monitoring during invasive procedures", sr: "Ultrazvučna kontrola tokom invazivnih procedura" },
-    { ru: "УЗИ в косметологии", en: "Ultrasound in aesthetic medicine", sr: "Ultrazvuk u kozmetologiji" },
+    { ru: "УЗИ контроль инвазивных процедур", en: "Ultrasound guidance of invasive procedures", sr: "Ultrazvučna kontrola invazivnih procedura" },
+    { ru: "УЗИ в косметологии", en: "Ultrasound in aesthetic medicine", sr: "Ultrazvuk u estetskoj medicini" },
 
     // —— dates ——
     { ru: "2021 г. – настоящее время", en: "2021 – present", sr: "2021 – danas" },
@@ -118,22 +122,22 @@
     { ru: "— «Клиника лечения позвоночника и суставов доктора Длина», Москва", en: "— Dr. Dlin Clinic for Spine and Joint Treatment, Moscow", sr: "— Klinika za lečenje kičme i zglobova doktora Dlina, Moskva" },
     { ru: "— ООО «Клиника Центральная», Москва", en: "— Tsentralnaya Clinic LLC, Moscow", sr: "— Klinika Centralnaja d.o.o., Moskva" },
     { ru: "— «Центравиамед», Москва", en: "— Tsentraviamed, Moscow", sr: "— Centraviamed, Moskva" },
-    { ru: "— Лечебно-реабилитационный центр «Открытая клиника», Москва", en: "— Otkrytaya Klinika Medical Rehabilitation Center, Moscow", sr: "— Medicinsko-rehabilitacioni centar „Otvorena klinika“, Moskva" },
+    { ru: "— Лечебно-реабилитационный центр «Открытая клиника», Москва", en: "— Otkrytaya Klinika Treatment and Rehabilitation Center, Moscow", sr: "— Medicinsko-rehabilitacioni centar „Otvorena klinika“, Moskva" },
     { ru: "— «Клиника профессора Кинзерского А.Ю.», Челябинск", en: "— Professor A.Yu. Kinzerskiy Clinic, Chelyabinsk", sr: "— Klinika profesora A. Ju. Kinzerskog, Čeljabinsk" },
 
     // —— education ——
     { ru: "Являюсь автором", en: "Author of", sr: "Autorka" },
-    { ru: "более 20 статей и 1 патента", en: "more than 20 articles and one patent", sr: "više od 20 radova i jednog patenta" },
+    { ru: "более 20 статей и 1 патента", en: "more than 20 scientific articles and one patent", sr: "više od 20 radova i jednog patenta" },
     { ru: "на изобретение", en: "for an invention", sr: "za pronalazak" },
     { ru: "Первый Московский государственный медицинский университет им. И.М. Сеченова, «Биохакинг» — диплом о профессиональной переподготовке с предоставлением права на ведение профессиональной деятельности в сфере «консультирование в области превентивного персонализированного управления здоровьем»", en: "I.M. Sechenov First Moscow State Medical University, “Biohacking” — professional retraining diploma conferring the right to work in “preventive, personalized health management consulting”", sr: "Prvi moskovski državni medicinski univerzitet I. M. Sečenova, „Biohaking“ — diploma o stručnoj prekvalifikaciji koja daje pravo na rad u oblasti „savetovanja o preventivnom, personalizovanom upravljanju zdravljem“" },
     { ru: "Сертификат о прохождении обучения «Нюансы в теле человека. Функциональная неврология»", en: "Certificate of completion: “Nuances in the Human Body. Functional Neurology”", sr: "Sertifikat o završenoj obuci „Nijanse u ljudskom telu. Funkcionalna neurologija“" },
     { ru: "Регулярное прохождение сертификационных курсов и курсов повышения квалификации по специальности — врач УЗД", en: "Regular completion of certification and continuing education courses in ultrasound diagnostics", sr: "Redovno pohađanje sertifikacionih kurseva i kurseva stručnog usavršavanja za lekara UZ dijagnostike" },
     { ru: "Обучение в рамках реализации модели отработки основных принципов непрерывного медицинского образования и получение зачётных единиц, обеспеченных Российской ассоциацией УЗД в медицине (РАСУДМ), с индивидуальным кодом подтверждения", en: "Training under the continuing medical education model, with CME credits issued by the Russian Association of Specialists in Ultrasound Diagnostics in Medicine (RASUDM) and an individual confirmation code", sr: "Obuka po modelu kontinuirane medicinske edukacije i sticanje kreditnih poena koje dodeljuje Ruska asocijacija specijalista UZ dijagnostike u medicini (RASUDM), uz individualni kod za potvrdu" },
     { ru: "Регулярное участие во всероссийских конгрессах и мастер-классах по УЗД", en: "Regular participation in Russian national congresses and workshops in ultrasound diagnostics", sr: "Redovno učešće na ruskim nacionalnim kongresima i stručnim radionicama iz UZ dijagnostike" },
-    { ru: "Клиническая ординатура на кафедре лучевой диагностики и лучевой терапии с курсом УЗД УГМАДО", en: "Clinical residency in the Department of Radiology and Radiotherapy, including ultrasound diagnostics, at UGMADO", sr: "Klinička specijalizacija na katedri za radiološku dijagnostiku i radioterapiju, sa kursom UZ dijagnostike, na UGMADO" },
-    { ru: "Ассистент кафедры УЗД УГМАДО (г. Челябинск), ведущий специалист по преподаванию сертификационного курса УЗД позвоночника", en: "Assistant in the Department of Ultrasound Diagnostics at UGMADO (Chelyabinsk); lead instructor for the certification course in spinal ultrasound", sr: "Asistent na katedri za UZ dijagnostiku UGMADO (Čeljabinsk), vodeći predavač na sertifikacionom kursu iz UZ dijagnostike kičme" },
-    { ru: "Решением диссертационного совета Российского центра рентгенорадиологии присуждена учёная степень кандидата медицинских наук", en: "Awarded the degree of Candidate of Medical Sciences by the dissertation council of the Russian Scientific Center of Roentgenoradiology", sr: "Stečeno zvanje kandidata medicinskih nauka odlukom disertacionog saveta Ruskog naučnog centra za rendgenradiologiju" },
-    { ru: "Первичная специализация и присвоение специальности врача УЗД", en: "Initial specialization and qualification as an ultrasound physician", sr: "Primarna specijalizacija i sticanje specijalnosti lekara UZ dijagnostike" },
+    { ru: "Клиническая ординатура на кафедре лучевой диагностики и лучевой терапии с курсом УЗД УГМАДО", en: "Clinical residency, Department of Radiology and Radiotherapy with a Course in Ultrasound Diagnostics, UGMADO", sr: "Klinička specijalizacija na Katedri za radiološku dijagnostiku i radioterapiju sa kursom UZ dijagnostike, UGMADO" },
+    { ru: "Ассистент кафедры УЗД УГМАДО (г. Челябинск), ведущий специалист по преподаванию сертификационного курса УЗД позвоночника", en: "Assistant Lecturer, Department of Ultrasound Diagnostics, Ural State Medical Academy of Continuing Education (UGMADO), Chelyabinsk; lead instructor for the certification course in spinal ultrasound", sr: "Asistent na Katedri za UZ dijagnostiku, Uralska državna medicinska akademija za dodatno obrazovanje (UGMADO), Čeljabinsk; vodeći predavač na sertifikacionom kursu iz UZ dijagnostike kičme" },
+    { ru: "Решением диссертационного совета Российского центра рентгенорадиологии присуждена учёная степень кандидата медицинских наук", en: "Awarded a PhD in Medical Sciences (Candidate of Medical Sciences) by the Dissertation Council of the Russian Scientific Center of Roentgenoradiology", sr: "Odlukom disertacionog saveta Ruskog naučnog centra za rendgenoradiologiju stečen naučni stepen doktora medicinskih nauka (kandidat medicinskih nauka)" },
+    { ru: "Первичная специализация и присвоение специальности врача УЗД", en: "Primary specialization and certification as an ultrasound physician", sr: "Primarna specijalizacija i sticanje specijalnosti lekara UZ dijagnostike" },
     { ru: "Интернатура по специальности акушерство и гинекология, присвоена квалификация акушера-гинеколога", en: "Internship in obstetrics and gynecology; qualified as an obstetrician-gynecologist", sr: "Pripravnički staž iz akušerstva i ginekologije; stečena kvalifikacija ginekologa-akušera" },
     { ru: "Волгоградская государственная медицинская академия, специальность — лечебное дело", en: "Volgograd State Medical Academy, specialty — General Medicine", sr: "Volgogradska državna medicinska akademija, smer — opšta medicina" }
   ];
@@ -236,6 +240,7 @@
     if (LANGS.every(function (l) { return l.id !== lang; })) lang = "ru";
     try { localStorage.setItem("resume-lang", lang); } catch (e) {}
     document.documentElement.lang = lang === "sr" ? "sr" : lang;
+    ensurePatronymicStyle();
     document.title = translateString(document.title, lang);
     walk(document.body, lang);
     var bar = document.querySelector(".i18n-bar");
@@ -246,6 +251,15 @@
     }
     notifyPreviews(lang);
     syncPdfLabels(lang);
+  }
+
+  // The patronymic is Russian-only: shown when the page language is ru, hidden otherwise.
+  function ensurePatronymicStyle() {
+    if (document.getElementById("i18n-mid")) return;
+    var st = document.createElement("style");
+    st.id = "i18n-mid";
+    st.textContent = 'html:not([lang="ru"]) .mid{display:none}';
+    document.head.appendChild(st);
   }
 
   function syncPdfLabels(lang) {
@@ -386,7 +400,7 @@
         if (!btn) return;
         e.preventDefault();
         e.stopPropagation();
-        var card = btn.closest(".card");
+        var card = btn.closest(".card, .featured");
         downloadFromFrame(card && card.querySelector("iframe"));
       });
     }

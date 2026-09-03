@@ -14,10 +14,34 @@
   header{max-width:1180px;margin:0 auto 30px}
   h1{font-size:26px;font-weight:800;letter-spacing:-.01em}
   header p{margin-top:6px;font-size:13px;color:#9aa2ad}
-  .grid{max-width:1180px;margin:0 auto;display:grid;
-    grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:26px}
+
+  /* ---- featured (main) version ---- */
+  .featured{max-width:1180px;margin:0 auto 48px;display:grid;grid-template-columns:minmax(0,440px) 1fr;
+    background:#20242b;border:1px solid #3a414d;border-radius:16px;overflow:hidden}
+  .featured .thumb{border-right:1px solid #2c313a}
+  .featured-body{padding:36px 40px;display:flex;flex-direction:column;justify-content:center;min-width:0}
+  .eyebrow{font-size:11px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:#c9a45c}
+  .featured h2{margin-top:12px;font-size:32px;font-weight:800;letter-spacing:-.01em;display:flex;align-items:baseline;gap:14px}
+  .featured h2 .n{color:#7c8797;font-size:13px;font-weight:600;letter-spacing:.1em}
+  .featured .lead{margin-top:12px;font-size:14.5px;line-height:1.6;color:#c3c9d2;max-width:52ch}
+  .featured .desc{margin-top:10px;font-size:13px;line-height:1.6;color:#9aa2ad;max-width:52ch}
+  .actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:1px solid #3a414d;
+    background:#262b34;color:#e8eaee;border-radius:10px;padding:11px 18px;cursor:pointer;text-decoration:none;
+    font:600 13px/1 'Manrope',sans-serif}
+  .btn:hover{border-color:#5a6474;background:#2c323c}
+  .btn-primary{background:#fff;color:#171a1f;border-color:#fff}
+  .btn-primary:hover{background:#e8eaee;border-color:#e8eaee}
+  .btn svg{width:14px;height:14px;flex:0 0 auto}
+
+  /* ---- other versions ---- */
+  .others{max-width:1180px;margin:0 auto}
+  .others-head{display:flex;align-items:baseline;gap:12px;margin-bottom:16px}
+  .others-head h2{font-size:16px;font-weight:800}
+  .others-head span{font-size:12px;color:#7c8797}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:18px}
   .card{display:flex;flex-direction:column;text-decoration:none;color:inherit;background:#20242b;
-    border:1px solid #2c313a;border-radius:14px;overflow:hidden;
+    border:1px solid #2c313a;border-radius:12px;overflow:hidden;
     transition:transform .18s ease, border-color .18s ease}
   .card:hover{transform:translateY(-4px);border-color:#4a5262}
   .card-main{display:block;text-decoration:none;color:inherit;flex:1;min-width:0}
@@ -26,16 +50,24 @@
   .thumb iframe{position:absolute;top:0;left:0;width:794px;height:1123px;border:0;
     transform-origin:top left;pointer-events:none;background:#fff;
     transform:scale(calc(100cqi / 794))}
-  .meta{padding:14px 16px 16px;border-top:1px solid #2c313a}
-  .cname{font-size:14.5px;font-weight:800;display:flex;align-items:baseline;gap:9px}
-  .cname .n{color:#7c8797;font-size:11px;font-weight:600;letter-spacing:.1em}
-  .meta p{margin-top:5px;font-size:11.5px;line-height:1.5;color:#9aa2ad}
-  .card-actions{padding:0 16px 14px}
+  .meta{padding:11px 13px 12px;border-top:1px solid #2c313a}
+  .cname{font-size:13px;font-weight:800;display:flex;align-items:baseline;gap:8px}
+  .cname .n{color:#7c8797;font-size:10.5px;font-weight:600;letter-spacing:.1em}
+  .meta p{margin-top:4px;font-size:11px;line-height:1.5;color:#9aa2ad}
+  .card-actions{padding:0 13px 12px}
   .pdf-dl{display:inline-flex;align-items:center;justify-content:center;gap:7px;width:100%;
-    border:1px solid #3a414d;background:#262b34;color:#e8eaee;border-radius:9px;
-    padding:8px 12px;cursor:pointer;font:600 12px/1 'Manrope',sans-serif}
+    border:1px solid #3a414d;background:#262b34;color:#e8eaee;border-radius:8px;
+    padding:7px 10px;cursor:pointer;font:600 11.5px/1 'Manrope',sans-serif}
   .pdf-dl:hover{border-color:#5a6474;background:#2c323c}
-  .pdf-dl svg{width:14px;height:14px;flex:0 0 auto}
+  .pdf-dl svg{width:13px;height:13px;flex:0 0 auto}
+
+  @media (max-width:760px){
+    body{padding:32px 18px 48px}
+    .featured{grid-template-columns:1fr}
+    .featured .thumb{border-right:0;border-bottom:1px solid #2c313a}
+    .featured-body{padding:24px 22px 26px}
+    .featured h2{font-size:26px}
+  }
 </style>
 </head>
 <body>
@@ -43,13 +75,32 @@
   <h1>Larisa — Resume Concepts</h1>
   <p>Twelve visual directions, the same content. Click any card to open the full page. Each page is print-ready in A4 format.</p>
 </header>
-<div class="grid">
+
+<article class="featured">
+  <a class="card-main" href="concept-8-indigo.html" aria-label="Индиго">
+    <div class="thumb"><iframe src="concept-8-indigo.html?preview=1" title="Индиго" tabindex="-1"></iframe></div>
+  </a>
+  <div class="featured-body">
+    <div class="eyebrow">Основной вариант</div>
+    <h2><span class="n">08</span>Индиго</h2>
+    <p class="lead">Вариант, который выбрала Лариса. Остальные направления ниже — для сравнения.</p>
+    <p class="desc">Navy header with a full-height photo on the right edge, Playfair Display, gold rules. Exams in a pale left column.</p>
+    <div class="actions">
+      <a class="btn btn-primary" href="concept-8-indigo.html">Открыть страницу</a>
+      <button type="button" class="btn pdf-dl"><svg viewBox="0 0 16 16" aria-hidden="true"><path fill="currentColor" d="M8.5 1.5a.5.5 0 0 0-1 0V9.3L5.35 7.15a.5.5 0 1 0-.7.7l3 3a.5.5 0 0 0 .7 0l3-3a.5.5 0 1 0-.7-.7L8.5 9.3V1.5zM3 12.5A1.5 1.5 0 0 0 4.5 14h7a1.5 1.5 0 0 0 1.5-1.5V11a.5.5 0 0 0-1 0v1.5a.5.5 0 0 1-.5.5h-7a.5.5 0 0 1-.5-.5V11a.5.5 0 0 0-1 0v1.5z"/></svg><span class="pdf-label">Download PDF</span></button>
+    </div>
+  </div>
+</article>
+
+<section class="others">
+  <div class="others-head"><h2>Другие варианты</h2><span>11</span></div>
+  <div class="grid">
     <article class="card">
       <a class="card-main" href="concept-1-minimal.html">
       <div class="thumb"><iframe src="concept-1-minimal.html?preview=1" title="Минимализм" loading="lazy" tabindex="-1"></iframe></div>
       <div class="meta">
         <div class="cname"><span class="n">01</span>Минимализм</div>
-        <p>Black and white typography, one typeface (Inter), tabular dates, and a colour photo. No decoration.</p>
+        <p>Black and white typography, one typeface (Inter), tabular dates, and a color photo. No decoration.</p>
       </div>
       </a>
       <div class="card-actions">
@@ -129,18 +180,6 @@
       </div>
     </article>
     <article class="card">
-      <a class="card-main" href="concept-8-indigo.html">
-      <div class="thumb"><iframe src="concept-8-indigo.html?preview=1" title="Индиго" loading="lazy" tabindex="-1"></iframe></div>
-      <div class="meta">
-        <div class="cname"><span class="n">08</span>Индиго</div>
-        <p>Navy header with a full-height photo on the right edge, Playfair Display, gold rules. Exams in a pale left column.</p>
-      </div>
-      </a>
-      <div class="card-actions">
-        <button type="button" class="pdf-dl"><svg viewBox="0 0 16 16" aria-hidden="true"><path fill="currentColor" d="M8.5 1.5a.5.5 0 0 0-1 0V9.3L5.35 7.15a.5.5 0 1 0-.7.7l3 3a.5.5 0 0 0 .7 0l3-3a.5.5 0 1 0-.7-.7L8.5 9.3V1.5zM3 12.5A1.5 1.5 0 0 0 4.5 14h7a1.5 1.5 0 0 0 1.5-1.5V11a.5.5 0 0 0-1 0v1.5a.5.5 0 0 1-.5.5h-7a.5.5 0 0 1-.5-.5V11a.5.5 0 0 0-1 0v1.5z"/></svg><span class="pdf-label">Download PDF</span></button>
-      </div>
-    </article>
-    <article class="card">
       <a class="card-main" href="concept-9-broadsheet.html">
       <div class="thumb"><iframe src="concept-9-broadsheet.html?preview=1" title="Газетный" loading="lazy" tabindex="-1"></iframe></div>
       <div class="meta">
@@ -188,7 +227,8 @@
         <button type="button" class="pdf-dl"><svg viewBox="0 0 16 16" aria-hidden="true"><path fill="currentColor" d="M8.5 1.5a.5.5 0 0 0-1 0V9.3L5.35 7.15a.5.5 0 1 0-.7.7l3 3a.5.5 0 0 0 .7 0l3-3a.5.5 0 1 0-.7-.7L8.5 9.3V1.5zM3 12.5A1.5 1.5 0 0 0 4.5 14h7a1.5 1.5 0 0 0 1.5-1.5V11a.5.5 0 0 0-1 0v1.5a.5.5 0 0 1-.5.5h-7a.5.5 0 0 1-.5-.5V11a.5.5 0 0 0-1 0v1.5z"/></svg><span class="pdf-label">Download PDF</span></button>
       </div>
     </article>
-</div>
+  </div>
+</section>
   <script src="i18n.js"></script>
 </body>
 </html>
